@@ -14,7 +14,7 @@ public class PeopleController : ControllerBase, IDisposable
     {
         Db = db;
 
-        db.DropAndCreateTable<Person>();
+        //db.DropAndCreateTable<Person>();
     }
 
     [HttpGet]

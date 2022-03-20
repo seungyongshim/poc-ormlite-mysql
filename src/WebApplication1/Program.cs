@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IDbConnectionFactory>(sp =>
     new OrmLiteConnectionFactory(builder.Configuration.GetConnectionString("Default")));
 
-builder.Services.AddTransient(sp => sp.GetService<IDbConnectionFactory>().CreateDbConnection());
+builder.Services.AddTransient(sp => sp.GetService<IDbConnectionFactory>(). CreateDbConnection());
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
